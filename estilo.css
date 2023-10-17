@@ -189,87 +189,78 @@ body {
 /* Estilizando a lista de informações acadêmicas no currículo */
 
 .portfolio {
-  height: fit-content;
-  width: 100%;
-  margin-top: 200px;
-  font-family: var(--text-font);
   display: grid;
-  grid-template-rows: auto auto;
-  grid-template-columns: 1fr 1fr;
-  gap: 3.4rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
   justify-items: center;
-  align-content: space-evenly;
+  align-content: flex-start;
+  margin-top: 100px;
 }
-/* Estilizando a seção de "Portfólio" */
 
 .portfolio h2 {
-  grid-row: 1;
-  grid-column: 1 / 3;
-  color: var(--font-color);
-  font-size: 3.2em;
+  grid-column: 1 / -1;
   text-align: center;
-  line-height: 1em;
-  padding-bottom: 40px;
+  font-size: 2.8em;
+  margin-bottom: 40px;
 }
-/* Estilizando o título da seção "Portfólio" */
 
 .portfolio .projects {
-  width: 60%;
-  height: 430px;
-  min-width: 250px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-/* Estilizando os projetos no "Portfólio" */
-
-.portfolio .projects .project-header img {
   width: 100%;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
-  transform: translate(0px, 4px);
-}
-/* Estilizando a imagem do cabeçalho do projeto no "Portfólio" */
-
-.portfolio .projects .project-content {
-  background-color: var(--font-color);
+  max-width: 80%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
+  background-color: var(--font-color);
+  border-radius: 15px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.2s ease;
 }
-/* Estilizando o conteúdo do projeto no "Portfólio" */
 
-.portfolio .projects .project-content h3 {
-  padding-top: 15px;
+.portfolio .projects:hover {
+  transform: translateY(-5px);
 }
-/* Estilizando o título do projeto no "Portfólio" */
 
-.portfolio .projects .project-content p {
-  margin: 0px;
-  padding: 0px 15px;
-  text-align: justify;
+.portfolio .project-header img {
+  max-width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
-/* Estilizando a descrição do projeto no "Portfólio" */
 
-.portfolio .projects .project-content a {
+.portfolio .project-content {
+  padding: 20px;
+}
+
+.portfolio .project-content h3 {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+
+.portfolio .project-content p {
+  margin: 0;
+  font-size: 1.2em;
+  line-height: 1.4;
+}
+
+.portfolio .project-link {
+  margin-top: 20px;
+}
+
+.portfolio .project-link a {
   text-decoration: none;
-  padding: 10px;
+  color: var(--primary-color);
+  font-size: 1.2em;
+  transition: transform 0.2s;
+  margin-right: 10px;
 }
-/* Estilizando os links para os projetos no "Portfólio" */
 
-.portfolio .projects .project-content a img {
-  padding-bottom: 15px;
+.portfolio .project-link a img {
+  width: 24px;
+  height: 24px;
 }
-/* Estilizando as imagens dos links para os projetos no "Portfólio" */
 
-.portfolio .projects .project-content a img:hover {
-  transform: translate(2px, -2px);
-  transition: 0.2s;
+.portfolio .project-link a:hover {
+  transform: translateX(3px);
 }
-/* Adicionando um efeito de hover nas imagens dos links para os projetos no "Portfólio" */
 
 .contact {
   height: fit-content;
